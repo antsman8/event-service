@@ -26,7 +26,7 @@ exports.createEvent = async (req, res) => {
 };
 
 exports.getEventHistory = async (req, res) => {
-    const userId = req.query.id; // Необязательный параметр
+    const userId = req.query.id;
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     const offset = (page - 1) * limit;
